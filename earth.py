@@ -47,9 +47,7 @@ def generate_values():
 def assign_values(df):
     
     global letters_df
-
     df = df.merge(letters_df, on = 'letter', how = 'left')
-
     return df
 
 
@@ -78,7 +76,7 @@ def brute_force():
 
         print("%d %d" % (s, e + v + u) )
 
-        #print("Attempting failed...")
+        #print("Attempt failed...")
 
         if ( s == e + v + u and s > 0 ):
             break
